@@ -1,0 +1,13 @@
+{
+  "name": "buyguard",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Privacy-first marketplace listing risk analysis, rule-based first and local-first.",
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "check": "pnpm lint && pnpm test && pnpm typecheck",
+    "lint": "echo 'Tooling will be introduced in M1.'",
+    "test": "echo 'Test runner will be introduced in M1.'",
+    "typecheck": "echo 'TypeScript configuration will be introduced in M1.'"
+  }
+}

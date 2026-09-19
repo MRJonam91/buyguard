@@ -1,0 +1,26 @@
+# Dependencies and build outputs
+node_modules/
+dist/
+coverage/
+.turbo/
+
+# Local data and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.sqlite
+*.db
+local-data/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local document review artifacts
+.docx-review/
+.tmp/

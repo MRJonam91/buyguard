@@ -1,0 +1,6 @@
+# Sensitive areas require maintainer review | Le aree sensibili richiedono revisione del maintainer
+* @MRJonam91
+/.github/ @MRJonam91
+/apps/browser-extension/ @MRJonam91
+/packages/ai-gateway/ @MRJonam91
+/docs/platform-rules/ @MRJonam91
