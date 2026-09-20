@@ -27,3 +27,15 @@ BUYGUARD e local-first. L'MVP analizza il contenuto della pagina disponibile all
 The product must expose settings to disable automatic analysis, clear local data, control each provider and review what leaves the device. The default is no cloud processing.
 
 Il prodotto deve esporre impostazioni per disabilitare l'analisi automatica, cancellare dati locali, controllare ogni provider e verificare cosa lascia il dispositivo. L'impostazione predefinita e nessuna elaborazione cloud.
+
+## Report and legal-guidance data | Dati di segnalazione e guida legale
+
+Report packets may contain listing text, URLs, screenshots, seller identifiers visible on the listing and the user's contact details when an official notice form requires them. BUYGUARD must keep these fields local by default, let the user redact irrelevant personal data, and show the final payload before it is copied or transmitted. Jurisdiction is user-declared and must not be inferred from sensitive data when a direct question is sufficient.
+
+I pacchetti di segnalazione possono contenere testo dell'annuncio, URL, screenshot, identificativi del venditore visibili nell'annuncio e contatti dell'utente quando richiesti da un modulo ufficiale. BUYGUARD deve mantenere questi campi locali per default, consentire l'oscuramento di dati personali irrilevanti e mostrare il payload finale prima che venga copiato o trasmesso. La giurisdizione e dichiarata dall'utente e non deve essere dedotta da dati sensibili quando e sufficiente una domanda diretta.
+
+## Provider credentials | Credenziali provider
+
+Browser content scripts and page code must never receive AI credentials. The website uses server-side secret handling if BYOK is offered; desktop and mobile use an operating-system credential vault or an explicitly designed secure proxy. Credentials are excluded from reports, logs, analytics, crash data and exports. A consumer subscription is not treated as an API credential.
+
+I content script e il codice pagina non devono mai ricevere credenziali AI. Il sito usa gestione server-side dei segreti se offre BYOK; desktop e mobile usano un credential vault del sistema operativo o un proxy sicuro progettato esplicitamente. Le credenziali sono escluse da report, log, analytics, crash data ed export. Un abbonamento consumer non e trattato come credenziale API.

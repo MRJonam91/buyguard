@@ -1,0 +1,19 @@
+{
+  "id": "photo-only-console",
+  "url": "https://example.invalid/item/photo-only-console",
+  "platform": "fixture",
+  "title": "PlayStation 5 Slim Digital Edition",
+  "description": "Console PS5 come nuova, pochissimo utilizzo, imballo originale. Consegna rapida in tutta Italia. Attenzione: l'inserzione riguarda la vendita della fotografia della console, non della console.",
+  "category": "Elettronica / Console",
+  "priceCents": 2500,
+  "currency": "EUR",
+  "seller": { "id": "seller-002", "name": "utente_esempio_2" },
+  "images": ["https://example.invalid/img/photo-only-console-1.jpg"],
+  "links": [],
+  "provenance": {
+    "title": { "kind": "page-metadata", "locator": "meta[property='og:title']" },
+    "description": { "kind": "page-metadata", "locator": "meta[property='og:description']" },
+    "priceCents": { "kind": "page-metadata", "locator": "meta[property='product:price:amount']" }
+  },
+  "capturedAt": "2026-09-20T09:05:00.000Z"
+}

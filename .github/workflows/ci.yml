@@ -15,11 +15,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
-        with:
-          version: 10
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
+
       - run: pnpm install --frozen-lockfile
-      - run: pnpm check
+
+      - name: Lint, typecheck and test | Lint, typecheck e test
+        run: pnpm check
+
+      # The extension is the only shipped deliverable. Without this step CI can
+      # be green while the thing users install does not build.
+      # L'estensione e l'unico deliverable: senza questo passo la CI puo essere
+      # verde mentre cio che l'utente installa non compila.
+      - name: Build the browser extension | Build dell'estensione
+        run: pnpm build
+
+      # SECURITY.md promises dependency scanning. Reported, not blocking: an
+      # unrelated advisory should not stop an unrelated pull request.
+      # Segnalato, non bloccante: un advisory non correlato non deve bloccare
+      # una pull request non correlata.
+      - name: Audit dependencies | Audit delle dipendenze
+        run: pnpm audit --audit-level=high
+        continue-on-error: true

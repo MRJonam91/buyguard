@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "types": ["chrome", "node", "vite/client"],
+    "noEmit": true,
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*", "tests/**/*", "manifest.config.ts", "vite.config.ts", "vitest.config.ts"]
+}
