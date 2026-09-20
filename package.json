@@ -4,7 +4,11 @@
   "private": true,
   "description": "Privacy-first marketplace listing risk analysis, rule-based first and local-first.",
   "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
+    "build": "pnpm --filter @buyguard/browser-extension build",
     "check": "pnpm lint && pnpm typecheck && pnpm test",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
@@ -16,5 +20,8 @@
     "@biomejs/biome": "^1.9.4",
     "typescript": "^5.7.0",
     "vitest": "^3.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
   }
 }

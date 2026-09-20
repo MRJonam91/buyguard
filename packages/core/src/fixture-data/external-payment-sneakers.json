@@ -1,0 +1,19 @@
+{
+  "id": "external-payment-sneakers",
+  "url": "https://example.invalid/item/external-payment-sneakers",
+  "platform": "fixture",
+  "title": "Sneakers running taglia 42",
+  "description": "Sneakers usate poche volte, taglia 42. Per chiudere piu in fretta scrivimi su Telegram e paghiamo con bonifico diretto, cosi evitiamo le commissioni della piattaforma.",
+  "category": "Scarpe / Sneakers",
+  "priceCents": 4200,
+  "currency": "EUR",
+  "seller": { "id": "seller-003", "name": "utente_esempio_3", "rating": 3.1 },
+  "images": ["https://example.invalid/img/external-payment-sneakers-1.jpg"],
+  "links": ["https://t.example.invalid/utente_esempio_3"],
+  "provenance": {
+    "title": { "kind": "page-metadata", "locator": "meta[property='og:title']" },
+    "description": { "kind": "page-metadata", "locator": "meta[property='og:description']" },
+    "links": { "kind": "dom", "locator": "a[href]" }
+  },
+  "capturedAt": "2026-09-20T09:10:00.000Z"
+}

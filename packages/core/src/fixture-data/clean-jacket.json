@@ -1,0 +1,19 @@
+{
+  "id": "clean-jacket",
+  "url": "https://example.invalid/item/clean-jacket",
+  "platform": "fixture",
+  "title": "Giacca di jeans Levi's taglia M",
+  "description": "Giacca di jeans originale, taglia M, indossata poche volte. Nessun difetto, colore blu chiaro. Spedizione tramite il sistema della piattaforma.",
+  "category": "Abbigliamento / Giacche",
+  "priceCents": 3500,
+  "currency": "EUR",
+  "seller": { "id": "seller-001", "name": "utente_esempio_1", "rating": 4.8 },
+  "images": ["https://example.invalid/img/clean-jacket-1.jpg"],
+  "links": [],
+  "provenance": {
+    "title": { "kind": "page-metadata", "locator": "meta[property='og:title']" },
+    "description": { "kind": "page-metadata", "locator": "meta[property='og:description']" },
+    "priceCents": { "kind": "page-metadata", "locator": "meta[property='product:price:amount']" }
+  },
+  "capturedAt": "2026-09-20T09:00:00.000Z"
+}
