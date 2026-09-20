@@ -2,38 +2,58 @@
 
 ## Delivery rule | Regola di consegna
 
-Each milestone must leave the repository buildable, tested and documented. A detector is complete only with positive, negative and borderline fixtures, unit tests, rationale text and an evidence trace. Security or privacy changes require an update to the relevant documents.
+Each milestone must leave the repository buildable, tested and documented. A detector is complete only with a written definition, positive, negative and borderline fixtures, unit tests, rationale, evidence trace, limitations and benchmark results. A policy or legal-guidance change is complete only with official sources, applicability, reviewed date and expiry behavior.
 
-Ogni milestone deve lasciare la repository compilabile, testata e documentata. Un detector e completo solo con fixture positive, negative e borderline, unit test, testo di rationale e traccia delle evidenze. Le modifiche a sicurezza o privacy richiedono l'aggiornamento dei documenti pertinenti.
+Ogni milestone deve lasciare la repository compilabile, testata e documentata. Un detector e completo solo con definizione scritta, fixture positive, negative e borderline, unit test, motivazione, traccia evidenze, limiti e risultati benchmark. Una modifica a policy o guida legale e completa solo con fonti ufficiali, applicabilita, data di revisione e comportamento alla scadenza.
+
+## Milestones | Milestone
 
 | Milestone | Outcome in English | Risultato in italiano | Exit criteria |
 | --- | --- | --- | --- |
-| M0 | Governance and architecture foundation | Fondazioni di governance e architettura | License, repository metadata, docs, ADR and CI baseline exist |
-| M1 | Browser shell and canonical contracts | Shell browser e contratti canonici | MV3 extension loads; mocked page becomes a valid `Listing` |
-| M2 | Deterministic rule engine | Rule engine deterministico | Versioned rules validate and evaluate reproducibly |
-| M3 | Detectors, evidence and risk UI | Detector, evidenze e UI rischio | Priority detectors have full fixture matrices and explanation view |
-| M4 | First Vinted adapter | Primo adapter Vinted | Non-invasive extraction is documented and tested on a supported page shape |
-| M5 | Subito and eBay adapters | Adapter Subito ed eBay | Shared adapter conformance suite passes |
-| M6 | Local tool and local OCR | Tool locale e OCR locale | URL/HTML/text/screenshot flow exports local JSON/Markdown reports |
-| M7 | Optional AI gateway BYOK | AI gateway BYOK opzionale | Explicit consent, local secure storage boundary and provider contract verified |
-| M8 | Local AI providers | Provider AI locali | Cloud-free optional provider path available |
-| M9 | Android companion | Companion Android | Reuses core without continuous capture or assumed unrestricted overlay |
-| M10 | iOS companion | Companion iOS | Uses only supported extension/share capabilities |
-| M11 | Rule registry ecosystem | Ecosistema registro regole | Signed/versioned community rule distribution with review policy |
+| M0 complete | Governance, license and architecture foundation | Fondazioni di governance, licenza e architettura | Public repository metadata, Apache-2.0, docs and CI baseline |
+| M1 in progress | Canonical listing contracts and minimal MV3 shell | Contratti annuncio canonico e shell MV3 minima | Extension loads, explicit permission flow, supported mock page becomes a valid `Listing`, tests pass |
+| M1.1 | Revised concern and assistance contracts | Contratti rivisti per problemi e assistenza | `Concern`, multiple suggested actions, analyzer version, report packet and protocol migration tests |
+| M2 | Deep deterministic analysis facade and evaluation harness | Facade profonda di analisi deterministica e sistema di valutazione | One `analyze` interface, versioned dataset, metrics and calibration report |
+| M3 | Priority deception and payment detectors | Detector prioritari per inganno e pagamenti | PHOTO_ONLY, SUBSTITUTE_ITEM, PRICE_BAIT, UNOFFICIAL_AUCTION, EXTERNAL_PAYMENT, OBJECT_MISMATCH and DISCLOSURE_BURIED meet release gates |
+| M4 | Vinted adapter, accessible signals and reporting playbook | Adapter Vinted, segnali accessibili e guida alla segnalazione | Supported page shapes documented; in-page signal and side panel work; official route and sourced draft available |
+| M5 | eBay and Subito adapters and policy packs | Adapter eBay e Subito e pacchetti policy | Shared adapter conformance suite; versioned official reporting paths; stale-pack behavior |
+| M6 | Authenticity, spam, prohibited-item and safety families | Famiglie autenticita, spam, oggetti vietati e sicurezza | Each concern has definition, evidence requirements, limitations and independent quality report |
+| M7 | Website, desktop app, CLI and local OCR | Sito, app desktop, CLI e OCR locale | Pasted/uploaded inputs work locally; URL handling threat model; JSON/Markdown report export |
+| M8 | Jurisdiction-aware DSA and legal-guidance assistance | Assistenza DSA e guida legale consapevole della giurisdizione | Policy vs alleged-illegal path separated; user confirms jurisdiction and good faith; no auto-submission |
+| M9 | Optional AI review with BYOK | Revisione AI opzionale con BYOK | Deterministic baseline remains complete; OpenAI, Anthropic and Gemini API-key adapters; explicit transmission preview |
+| M9.1 | Google delegated authorization | Autorizzazione delegata Google | Per-platform OAuth clients, minimum scopes, secure token handling and provider review; no implied ChatGPT or Claude login |
+| M10 | Local AI providers | Provider AI locali | Cloud-free optional AI review with same interface and privacy controls |
+| M11 | Android and iOS companions | Companion Android e iOS | User-initiated share/extension flow, no continuous capture, platform-policy review |
+| M12 | Reviewed rule and playbook registry | Registro revisionato di regole e guide | Signed/versioned distribution, maintainer review, source-expiry process and rollback |
 
-## M1 implementation sequence | Sequenza di implementazione M1
+## Immediate implementation sequence | Sequenza di implementazione immediata
 
-1. Select the Node and TypeScript toolchain and lock supported runtime versions.
-2. Create `packages/core` types and a fixture loader before any detector.
-3. Add the MV3 manifest, a manual Analyze action, a content-script adapter interface and a side-panel placeholder.
-4. Add lint, formatting, typecheck and test runners to CI.
-5. Prove the complete mock-page-to-`Listing` path with an integration test.
+1. Keep the existing M1 extraction and message tests green.
+2. Add the domain migration as a backward-compatible protocol revision: concern taxonomy, analyzer version and multiple suggested actions.
+3. Create `packages/analysis-engine` as the only product-facing analysis interface; compose existing rule, detector, evidence and risk modules behind it.
+4. Create the evaluation dataset schema before implementing scoring, so the 90% precision target is testable from the first detector.
+5. Implement the seven priority detectors test-first, beginning with PHOTO_ONLY and EXTERNAL_PAYMENT because their evidence can be made highly specific.
+6. Implement accessible visual signals and a static mock reporting playbook before live marketplace policy packs.
+7. Add the Vinted adapter and sourced playbook only after current official procedures are represented as versioned data.
 
-1. Selezionare toolchain Node e TypeScript e fissare le versioni runtime supportate.
-2. Creare i tipi di `packages/core` e un fixture loader prima di qualsiasi detector.
-3. Aggiungere manifest MV3, azione manuale Analyze, interfaccia adapter content-script e placeholder side panel.
-4. Aggiungere lint, formattazione, typecheck e test runner alla CI.
-5. Dimostrare il percorso completo mock-page-to-`Listing` con un integration test.
+1. Mantenere verdi i test M1 esistenti su estrazione e messaggi.
+2. Aggiungere la migrazione di dominio come revisione retrocompatibile del protocollo: tassonomia problemi, versione analyzer e azioni suggerite multiple.
+3. Creare `packages/analysis-engine` come unica interfaccia di analisi per i prodotti; comporre dietro di essa i moduli regole, detector, evidenze e rischio esistenti.
+4. Creare lo schema del dataset di valutazione prima dello scoring, cosi il target 90% di precision e verificabile dal primo detector.
+5. Implementare test-first i sette detector prioritari, iniziando da PHOTO_ONLY ed EXTERNAL_PAYMENT perche le loro evidenze possono essere molto specifiche.
+6. Implementare segnali visivi accessibili e una guida di segnalazione mock statica prima dei pacchetti policy live.
+7. Aggiungere adapter Vinted e guida documentata solo dopo aver rappresentato le procedure ufficiali correnti come dati versionati.
+
+## Detector release gates | Criteri di rilascio detector
+
+| Gate | Requirement / Requisito |
+| --- | --- |
+| Definition | Narrow written condition and explicit non-claims / Condizione scritta ristretta e non-affermazioni esplicite |
+| Evidence | Every HIGH or CRITICAL result has auditable evidence / Ogni risultato HIGH o CRITICAL ha evidenza verificabile |
+| Quality | >= 90% precision, >= 80% recall and <= 5% benign false positives on the declared evaluation scope |
+| Calibration | Displayed confidence has measured calibration; otherwise show qualitative confidence only / La confidenza mostrata ha calibrazione misurata; altrimenti mostrare solo confidenza qualitativa |
+| Coverage | Platform, language, category, sample size and unsupported cases published / Piattaforma, lingua, categoria, numerosita e casi non supportati pubblicati |
+| Safety | No seller verdict, legal conclusion or automatic report / Nessun verdetto sul venditore, conclusione legale o segnalazione automatica |
 
 ## Priority fixture matrix | Matrice prioritaria delle fixture
 
@@ -47,4 +67,8 @@ Ogni milestone deve lasciare la repository compilabile, testata e documentata. U
 | OBJECT_MISMATCH | Title, image and conditions conflict | Consistent listing | Incomplete listing |
 | DISCLOSURE_BURIED | Material condition far from main claim | Clear up-front condition | Short description with condition |
 
-La matrice definisce per ogni detector una fixture positiva, negativa e borderline. Non si deve aumentare lo score per una singola parola priva di contesto.
+## Evidence needed before impact claims | Evidenze necessarie prima delle affermazioni di impatto
+
+Do not market the improvement hypotheses in [impact-and-evaluation.md](impact-and-evaluation.md) as measured benefits. First publish the benchmark dataset version, test method, participant count, confidence intervals and deterministic-only versus AI-assisted results.
+
+Non presentare le ipotesi di miglioramento in [impact-and-evaluation.md](impact-and-evaluation.md) come benefici misurati. Pubblicare prima versione del dataset benchmark, metodo di test, numero di partecipanti, intervalli di confidenza e risultati solo deterministici rispetto a quelli assistiti da AI.
